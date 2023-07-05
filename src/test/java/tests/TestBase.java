@@ -9,6 +9,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import java.util.Map;
+
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
@@ -20,9 +22,10 @@ public class TestBase {
         Configuration.browserVersion = System.getProperty("browserVersion", "100");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("enableVNC", true);
-        capabilities.setCapability("enableVideo", true);
-        Configuration.browserCapabilities = capabilities;
+        capabilities.setCapability("selenoid:options", Map.<String,
+                Object>of(
+                "enableVNC", true,            "enableVideo", true    ));
+        Configuration.browserCapabilities = capabilities;}
     }
 
     @BeforeEach
