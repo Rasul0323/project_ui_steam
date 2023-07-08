@@ -26,7 +26,7 @@ public class CommunityPageTests extends TestBase {
     String firstSearchPanelSectionName = "Your Store";
     String sectionName = "Community";
     String pageName = "Discussions";
-    String playerName = "play_on_xbox";
+    String playerName = "devil wears prada";
 
     @Owner("r.shikhveliev")
     @Severity(SeverityLevel.CRITICAL)
