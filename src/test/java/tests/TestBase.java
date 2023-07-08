@@ -26,7 +26,7 @@ public class TestBase {
                 Object>of(
                 "enableVNC", true,            "enableVideo", true    ));
         Configuration.browserCapabilities = capabilities;}
-    }
+
 
     @BeforeEach
     public void addLogger() {
